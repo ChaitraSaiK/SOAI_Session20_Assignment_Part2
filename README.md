@@ -35,24 +35,24 @@ pip install numpy matplotlib kivy pillow
 
 ### ai.py
 
-**Neural Network (Network Class)**: A three-layer feedforward network with ReLU activation that predicts Q-values for possible actions (left, straight, right).
+- Neural Network (Network Class) : A three-layer feedforward network with ReLU activation that predicts Q-values for possible actions (left, straight, right).
 
-**Experience Replay (ReplayMemory Class)**: Stores past experiences to improve training stability by learning from older transitions.
+- Experience Replay (ReplayMemory Class) : Stores past experiences to improve training stability by learning from older transitions.
 
-**Deep Q-Network (Dqn Class)**: Uses softmax exploration, updates Q-values via the Bellman equation, and optimizes with Adam (LR = 0.001). Supports model saving/loading (last_brain.pth).
+- Deep Q-Network (Dqn Class) : Uses softmax exploration, updates Q-values via the Bellman equation, and optimizes with Adam (LR = 0.001). Supports model saving/loading (last_brain.pth).
 
 ### map.py
 Main script for running the self-driving car simulation.
 Uses reinforcement learning with a DQN-based AI agent (ai.py).
 Defines:
 
-**Car class**: Handles movement, sensors, and collision detection.
+    **Car class**: Handles movement, sensors, and collision detection.
 
-**Game class**: Updates game state, AI actions, and reward computation.
+    **Game class**: Updates game state, AI actions, and reward computation.
 
-**MyPaintWidget class**: Enables user to draw obstacles.
+    **MyPaintWidget class**: Enables user to draw obstacles.
 
-**CarApp class**: Initializes the application and provides UI buttons (clear, save, load).
+    **CarApp class**: Initializes the application and provides UI buttons (clear, save, load).
 
 
 
