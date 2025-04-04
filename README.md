@@ -74,6 +74,9 @@ Defines:
    - The AI learns based on the reward mechanism.
    - The trained model can be saved and reloaded for further improvements.
 
+
+    ![Alt Text](SOAI_Session20_Assignment_Part2\images\screenshot_readme.png)
+
 ## Running the Simulation
 ```bash
 python map.py
