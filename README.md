@@ -19,34 +19,40 @@ pip install numpy matplotlib kivy pillow
 
 ## Features:
 ### car.kv
-    __Car Representation__ :
+    **Car Representation:**
 
         - The car is visually represented using an image (fire_engine.png).
         - It has a size of (22, 12) pixels and rotates based on its angle.
 
-    **Sensors for Road Detection** :
+    **Sensors for Road Detection:**
 
         - Middle Sensor (Ball1): Green, detects the path ahead.
         - Left Sensor (Ball3) and Right Sensor (Ball2): Red, detect road edges and obstacles.
 
-    **Game Environment** :
+    **Game Environment:**
         - Background (my_citymap.png) represents the driving area.
         - The car and sensors are placed at the center initially.
 
 ### ai.py
 
-    **Neural Network (Network Class)** : A three-layer feedforward network with ReLU activation that predicts Q-values for possible actions (left, straight, right).
-    **Experience Replay (ReplayMemory Class)** : Stores past experiences to improve training stability by learning from older transitions.
-    **Deep Q-Network (Dqn Class)** : Uses softmax exploration, updates Q-values via the Bellman equation, and optimizes with Adam (LR = 0.001). Supports model saving/loading (last_brain.pth).
+**Neural Network (Network Class)**: A three-layer feedforward network with ReLU activation that predicts Q-values for possible actions (left, straight, right).
+
+**Experience Replay (ReplayMemory Class)**: Stores past experiences to improve training stability by learning from older transitions.
+
+**Deep Q-Network (Dqn Class)**: Uses softmax exploration, updates Q-values via the Bellman equation, and optimizes with Adam (LR = 0.001). Supports model saving/loading (last_brain.pth).
 
 ### map.py
-    Main script for running the self-driving car simulation.
-    Uses reinforcement learning with a DQN-based AI agent (ai.py).
-    Defines:
-    - **Car class** : Handles movement, sensors, and collision detection.
-    - **Game class** : Updates game state, AI actions, and reward computation.
-    - **MyPaintWidget class** : Enables user to draw obstacles.
-    - **CarApp class** : Initializes the application and provides UI buttons (clear, save, load).
+Main script for running the self-driving car simulation.
+Uses reinforcement learning with a DQN-based AI agent (ai.py).
+Defines:
+
+**Car class**: Handles movement, sensors, and collision detection.
+
+**Game class**: Updates game state, AI actions, and reward computation.
+
+**MyPaintWidget class**: Enables user to draw obstacles.
+
+**CarApp class**: Initializes the application and provides UI buttons (clear, save, load).
 
 
 
