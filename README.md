@@ -19,15 +19,17 @@ pip install numpy matplotlib kivy pillow
 
 ## Features:
 ### car.kv
-    - Car Representation:
+    **Car Representation:**
 
         - The car is visually represented using an image (fire_engine.png).
         - It has a size of (22, 12) pixels and rotates based on its angle.
-    - Sensors for Road Detection:
+
+    **Sensors for Road Detection:**
+
         - Middle Sensor (Ball1): Green, detects the path ahead.
         - Left Sensor (Ball3) and Right Sensor (Ball2): Red, detect road edges and obstacles.
 
-    - Game Environment:
+    **Game Environment:**
         - Background (my_citymap.png) represents the driving area.
         - The car and sensors are placed at the center initially.
 
@@ -41,22 +43,22 @@ pip install numpy matplotlib kivy pillow
     Main script for running the self-driving car simulation.
     Uses reinforcement learning with a DQN-based AI agent (ai.py).
     Defines:
-    - Car class: Handles movement, sensors, and collision detection.
-    - Game class: Updates game state, AI actions, and reward computation.
-    - MyPaintWidget class: Enables user to draw obstacles.
-    - CarApp class: Initializes the application and provides UI buttons (clear, save, load).
+    - **Car class:** Handles movement, sensors, and collision detection.
+    - **Game class:** Updates game state, AI actions, and reward computation.
+    - **MyPaintWidget class:** Enables user to draw obstacles.
+    - **CarApp class:** Initializes the application and provides UI buttons (clear, save, load).
 
 
 
 
 ## How It Works
-1. **Initialize the Simulation**: The simulation initializes a 2D environment where a car navigates toward goals while avoiding obstacles.
-2. **Sensors & Movement**: The car has three sensors that detect obstacles (sand) and influence movement decisions.
-3. **Deep Q-Learning**: The AI is trained using reinforcement learning to optimize navigation strategies.
-4. **User Interaction**:
+1. **Initialize the Simulation** : The simulation initializes a 2D environment where a car navigates toward goals while avoiding obstacles.
+2. **Sensors & Movement** : The car has three sensors that detect obstacles (sand) and influence movement decisions.
+3. **Deep Q-Learning** : The AI is trained using reinforcement learning to optimize navigation strategies.
+4. **User Interaction** :
    - Users can draw obstacles (sand) using the drawing tool.
    - Buttons allow clearing, saving, and loading the environment state.
-5. **Training & Inference**:
+5. **Training & Inference** :
    - The AI learns based on the reward mechanism.
    - The trained model can be saved and reloaded for further improvements.
 
