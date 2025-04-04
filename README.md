@@ -1,5 +1,11 @@
 # Self-Driving Car Simulation
 
+![Reinforcement Learning](https://img.shields.io/badge/Reinforcement_Learning-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Self Driving Car](https://img.shields.io/badge/Self_Driving_Car-00B4DB?style=for-the-badge&logo=tesla&logoColor=white)
+![DQN](https://img.shields.io/badge/DQN-FF0000?style=for-the-badge&logo=python&logoColor=white)
+![Kivy](https://img.shields.io/badge/Kivy-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+
 ## Overview
  This project uses Deep Q-Learning (DQN) to train a self-driving car to navigate only on roads while avoiding off-road areas. The reinforcement learning (RL) algorithm helps the car learn from past experiences and improve its decision-making over time.
  The project is built using **Kivy** for GUI rendering and **NumPy** for numerical computations.
@@ -19,17 +25,17 @@ pip install numpy matplotlib kivy pillow
 
 ## Features:
 ### car.kv
-    **Car Representation:**
+    Car Representation:
 
         - The car is visually represented using an image (fire_engine.png).
         - It has a size of (22, 12) pixels and rotates based on its angle.
 
-    **Sensors for Road Detection:**
+    Sensors for Road Detection:
 
         - Middle Sensor (Ball1): Green, detects the path ahead.
         - Left Sensor (Ball3) and Right Sensor (Ball2): Red, detect road edges and obstacles.
 
-    **Game Environment:**
+    Game Environment:
         - Background (my_citymap.png) represents the driving area.
         - The car and sensors are placed at the center initially.
 
@@ -46,13 +52,13 @@ Main script for running the self-driving car simulation.
 Uses reinforcement learning with a DQN-based AI agent (ai.py).
 Defines:
 
-    **Car class**: Handles movement, sensors, and collision detection.
+    - Car class: Handles movement, sensors, and collision detection.
 
-    **Game class**: Updates game state, AI actions, and reward computation.
+    - Game class: Updates game state, AI actions, and reward computation.
 
-    **MyPaintWidget class**: Enables user to draw obstacles.
+    - MyPaintWidget class: Enables user to draw obstacles.
 
-    **CarApp class**: Initializes the application and provides UI buttons (clear, save, load).
+    - CarApp class: Initializes the application and provides UI buttons (clear, save, load).
 
 
 
