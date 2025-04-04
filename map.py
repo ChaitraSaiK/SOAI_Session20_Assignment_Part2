@@ -22,7 +22,7 @@ from kivy.graphics.texture import Texture
 # Importing the Dqn object from our AI in ai.py
 from ai import Dqn
 
-# Adding this line if we don't want the right click to put a red point
+
 Config.set('input', 'mouse', 'mouse,multitouch_on_demand')
 Config.set('graphics', 'resizable', False)
 Config.set('graphics', 'width', '1034')
@@ -158,13 +158,13 @@ class Game(Widget):
         if sand[int(self.car.x),int(self.car.y)] > 0:
             self.car.velocity = Vector(0.5, 0).rotate(self.car.angle)
             print(1, goal_x, goal_y, distance, int(self.car.x),int(self.car.y), im.read_pixel(int(self.car.x),int(self.car.y)))
-            last_reward = -1
+            last_reward = -2
         else:
             self.car.velocity = Vector(2, 0).rotate(self.car.angle)
             last_reward = -0.2 # Reduced negative reward for normal movement
             print(0, goal_x, goal_y, distance, int(self.car.x),int(self.car.y), im.read_pixel(int(self.car.x),int(self.car.y)))
             if distance < last_distance:
-                last_reward = 0.4  # Increased positive reward for moving towards goal
+                last_reward = 0.5 # Increased positive reward for moving towards goal
 
         # Increased penalties for hitting edges
         if self.car.x < 30:  # Increased margin from edge
