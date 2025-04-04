@@ -19,7 +19,7 @@ pip install numpy matplotlib kivy pillow
 
 ## Features:
 ### car.kv
-    **Car Representation** :
+    __Car Representation__ :
 
         - The car is visually represented using an image (fire_engine.png).
         - It has a size of (22, 12) pixels and rotates based on its angle.
