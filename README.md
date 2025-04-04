@@ -75,7 +75,7 @@ Defines:
    - The trained model can be saved and reloaded for further improvements.
 
 
-    ![Alt Text](SOAI_Session20_Assignment_Part2\images\screenshot_readme.png)
+    ![Alt Text](https://github.com/ChaitraSaiK/SOAI_Session20_Assignment_Part2/blob/main/images/screenshot_readme.png)
 
 ## Running the Simulation
 ```bash
